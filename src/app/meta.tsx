@@ -12,15 +12,15 @@ export const Meta: React.FC<Meta> = ({}) => {
 			/>
 			<link
 				rel='icon'
-				type='image/png'
+				type='image/svg'
 				sizes='32x32'
-				href='/icons/favicon-32x32.png'
+				href='/icons/favicon.svg'
 			/>
 			<link
 				rel='icon'
-				type='image/png'
+				type='image/svg'
 				sizes='16x16'
-				href='/icons/favicon-16x16.png'
+				href='/icons/favicon.svg'
 			/>
 			<link
 				rel='manifest'

@@ -1,0 +1,3 @@
+.header {
+	@apply w-full h-[var(--header-size)] bg-cool-black fixed top-0 right-0;
+}

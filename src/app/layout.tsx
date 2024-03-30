@@ -1,12 +1,18 @@
-import type { Metadata } from 'next'
-import { Varta } from 'next/font/google'
-import './globals.css'
-import { SITE_NAME } from '@/constants/seo.constants'
-import Providers from './providers'
-import Head from 'next/head'
-import { Meta } from './meta'
+import clsx from 'clsx'
+import { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import React from 'react'
 
-const varta = Varta({ subsets: ['latin'] })
+import { Header } from '@/components/header'
+import Sidebar from '@/components/sidebar'
+
+import { SITE_NAME } from '@/constants/seo.constants'
+
+import './globals.css'
+import { Meta } from './meta'
+import Providers from '@/app/providers'
+
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
 	title: {
@@ -24,8 +30,27 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<Meta />
-			<body className={varta.className}>
-				<Providers>{children}</Providers>
+			<body
+				style={
+					{
+						'--header-size': '56px',
+						'--sidebar-size': '240px'
+					} as React.CSSProperties
+				}
+				className={clsx(
+					inter.className,
+					'w-full min-h-screen bg-primary-blue text-white'
+				)}
+			>
+				<Providers>
+					<div className='w-full min-h-screen overflow-hidden'>
+						<Header />
+						<Sidebar />
+						<main className='w-full h-full max-w-[calc(100%-var(--sidebar-size))] ml-auto mt-[var(--header-size)]'>
+							{children}
+						</main>
+					</div>
+				</Providers>
 			</body>
 		</html>
 	)

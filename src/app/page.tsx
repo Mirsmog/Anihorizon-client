@@ -1,10 +1,9 @@
-import { Header } from '@/components/header'
-import styles from './page.module.css'
 export default function Home() {
 	return (
-		<>
-			<Header />
-			<main>body</main>
-		</>
+		<div>
+			{[...Array(100)].map((item, _) => (
+				<div key={_}>{_ + 1}</div>
+			))}
+		</div>
 	)
 }
