@@ -22,12 +22,12 @@ export interface IMenuLink {
 export const MENU_NAVIGATION: IMenuLink[] = [
 	{
 		name: 'Главная',
-		path: '/',
+		path: '/home',
 		Icon: Home
 	},
 	{
 		name: 'Релизы',
-		path: '/home',
+		path: '/releases',
 		Icon: CalendarCheck
 	},
 	{
@@ -45,49 +45,34 @@ export const MENU_NAVIGATION: IMenuLink[] = [
 export const MENU_COLLECTIONS: IMenuLink[] = [
 	{
 		name: 'Понравившиеся',
-		path: '/',
+		path: '/user/liked',
 		Icon: Heart
 	},
 	{
 		name: 'Смотреть позже',
-		path: '/',
+		path: '/user/bookmarks',
 		Icon: Bookmark
 	},
 	{
 		name: 'История',
-		path: '/',
+		path: '/user/history',
 		Icon: History
-	},
-	{
-		name: 'Фэнтези',
-		path: '/',
-		Icon: ListVideo
-	},
-	{
-		name: 'Топ 100',
-		path: '/',
-		Icon: ListVideo
-	},
-	{
-		name: 'Зима 2024',
-		path: '/',
-		Icon: ListVideo
 	}
 ]
 export const MENU_OTHER: IMenuLink[] = [
 	{
 		name: 'Настроики',
-		path: '/',
+		path: '/settings',
 		Icon: Bolt
 	},
 	{
 		name: 'Вопросы и ответы',
-		path: '/',
+		path: '/faq',
 		Icon: HelpCircle
 	},
 	{
 		name: 'Отправить отзыв',
-		path: '/',
+		path: '/feedback',
 		Icon: AlertCircle
 	}
 ]

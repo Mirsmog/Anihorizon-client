@@ -3,7 +3,7 @@ import React from 'react'
 interface Home {}
 
 const Home: React.FC<Home> = ({}) => {
-	return <div>Home</div>
+	return <div>home</div>
 }
 
 export default Home

@@ -1,10 +1,13 @@
 import clsx from 'clsx'
 import { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { cookies } from 'next/headers'
 import React from 'react'
 
 import { Header } from '@/components/header'
+import { Main } from '@/components/main'
 import Sidebar from '@/components/sidebar'
+import { Wrapper } from '@/components/wrapper'
 
 import { SITE_NAME } from '@/constants/seo.constants'
 
@@ -27,29 +30,23 @@ export default function RootLayout({
 }: Readonly<{
 	children: React.ReactNode
 }>) {
+	const mode = cookies().get('compactMode')
+	const compactMode = JSON.parse(mode?.value || 'false')
 	return (
 		<html lang='en'>
 			<Meta />
 			<body
-				style={
-					{
-						'--header-size': '56px',
-						'--sidebar-size': '240px'
-					} as React.CSSProperties
-				}
 				className={clsx(
 					inter.className,
 					'w-full min-h-screen bg-primary-blue text-white'
 				)}
 			>
 				<Providers>
-					<div className='w-full min-h-screen overflow-hidden'>
+					<Wrapper compactValue={compactMode}>
 						<Header />
 						<Sidebar />
-						<main className='w-full h-full max-w-[calc(100%-var(--sidebar-size))] ml-auto mt-[var(--header-size)]'>
-							{children}
-						</main>
-					</div>
+						<Main>{children}</Main>
+					</Wrapper>
 				</Providers>
 			</body>
 		</html>

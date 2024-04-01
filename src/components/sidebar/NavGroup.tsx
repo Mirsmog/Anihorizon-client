@@ -1,3 +1,4 @@
+'use client'
 import clsx from 'clsx'
 import { ChevronDown } from 'lucide-react'
 import React from 'react'
@@ -30,7 +31,7 @@ export const NavGroup: React.FC<NavGroup> = ({
 					{navList.length > maxPreviewItems && compact ? compactList : navList}
 				</div>
 
-				{collapsible && (
+				{collapsible && navList.length > maxPreviewItems && (
 					<button
 						onClick={() => setCompact(!compact)}
 						title={title}
