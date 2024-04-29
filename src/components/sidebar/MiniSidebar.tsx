@@ -7,11 +7,14 @@ import {
 } from '@/constants/menu.data'
 
 import Sidebar from './index'
+import { UserAuth } from './ui/UserAuth'
 import { UserInfo } from './ui/UserInfo'
 
-interface MiniSidebar {}
+interface MiniSidebar {
+	user: { info: boolean }
+}
 
-export const MiniSidebar: React.FC<MiniSidebar> = ({}) => {
+export const MiniSidebar: React.FC<MiniSidebar> = ({ user }) => {
 	return (
 		<aside className='sidebar '>
 			<div className='flex-grow'>
@@ -49,13 +52,17 @@ export const MiniSidebar: React.FC<MiniSidebar> = ({}) => {
 					))}
 				</Sidebar.NavGroup>
 			</div>
-			<UserInfo
-				compactMode={true}
-				href='/'
-				id='#12313'
-				imageSrc='https://wallpapers.com/images/high/anime-profile-picture-jioug7q8n43yhlwn.webp'
-				name='Timur Tyuchiev'
-			/>
+			{user.info === true ? (
+				<UserInfo
+					compactMode={true}
+					href='/'
+					id='#12313'
+					imageSrc='/Avatar.jpg'
+					name='Timur Tyuchiev'
+				/>
+			) : (
+				<UserAuth compact={true} />
+			)}
 		</aside>
 	)
 }

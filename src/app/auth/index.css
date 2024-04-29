@@ -1,0 +1,22 @@
+.inputForm {
+	@apply w-full py-1.5 px-2.5 border border-accent-blue bg-cool-black border-opacity-20 rounded-[4px] outline-none text-base placeholder:text-[15px] placeholder:text-white placeholder:text-opacity-40 placeholder:font-normal focus:border-opacity-100;
+}
+.labelForm {
+	@apply text-white mb-2 text-base text-opacity-70 select-none capitalize;
+}
+
+.slideAnimation {
+	animation: slide 150s infinite linear;
+}
+
+@keyframes slide {
+	0% {
+		background-position-x: 0%;
+	}
+	50% {
+		background-position-x: 100%;
+	}
+	100% {
+		background-position-x: 0%;
+	}
+}

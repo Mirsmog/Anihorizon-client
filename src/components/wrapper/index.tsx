@@ -13,7 +13,7 @@ export interface ILayoutContext {
 	setCompact: (mode: boolean) => void
 	sidebarSize: number
 	setSidebarSize: (size: number) => void
-	wrapperRef: React.RefObject<HTMLDivElement | null> | null
+	wrapperRef: React.RefObject<HTMLDivElement> | null
 }
 export const LayoutContext = React.createContext<ILayoutContext>({
 	headerSize: 56,

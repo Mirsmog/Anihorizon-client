@@ -8,11 +8,14 @@ import {
 } from '@/constants/menu.data'
 
 import Sidebar from './index'
+import { UserAuth } from './ui/UserAuth'
 import { UserInfo } from './ui/UserInfo'
 
-interface FullSidebar {}
+interface FullSidebar {
+	user: { info: boolean }
+}
 
-export const FullSidebar = ({}: FullSidebar) => {
+export const FullSidebar = ({ user }: FullSidebar) => {
 	return (
 		<aside className='sidebar '>
 			<div className='flex-grow'>
@@ -60,13 +63,17 @@ export const FullSidebar = ({}: FullSidebar) => {
 				</Sidebar.NavGroup>
 			</div>
 
-			<UserInfo
-				compactMode={false}
-				href='/'
-				id='#12313'
-				imageSrc='https://wallpapers.com/images/high/anime-profile-picture-jioug7q8n43yhlwn.webp'
-				name='Timur Tyuchiev'
-			/>
+			{user.info === true ? (
+				<UserInfo
+					compactMode={false}
+					href='/'
+					id='#12313'
+					imageSrc='/Avatar.jpg'
+					name='Timur Tyuchiev'
+				/>
+			) : (
+				<UserAuth />
+			)}
 		</aside>
 	)
 }

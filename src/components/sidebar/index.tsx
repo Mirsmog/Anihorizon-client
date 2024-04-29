@@ -14,7 +14,8 @@ interface SidebarProps {}
 
 const Sidebar = ({}: SidebarProps) => {
 	const { compact: compactMode } = React.useContext(LayoutContext)
-	return compactMode ? <MiniSidebar /> : <FullSidebar />
+	const user = { info: true }
+	return compactMode ? <MiniSidebar user={user} /> : <FullSidebar user={user} />
 }
 export default Sidebar
 

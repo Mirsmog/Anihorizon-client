@@ -29,8 +29,8 @@ export const UserInfo: React.FC<UserInfo> = ({
 			<Image
 				src={imageSrc}
 				alt={'user'}
-				width={36}
-				height={36}
+				width={128}
+				height={128}
 				className='rounded-full w-10 h-10'
 			/>
 			{!compactMode && (

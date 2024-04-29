@@ -6,7 +6,8 @@ import React from 'react'
 import { Logo } from '../ui/logo/index'
 import { LayoutContext } from '../wrapper'
 
-import { AnimeSearch } from './AnimeSearch'
+import { FilterButton } from './FilterBtn'
+import { InputSearch } from './InputSearch'
 import './header.css'
 
 interface Header {}
@@ -32,8 +33,9 @@ export const Header: React.FC<Header> = ({}) => {
 					</button>
 					<Logo />
 				</div>
-				<div className='flex flex-shrink flex-grow-0 basis-[640px] mx-auto'>
-					<AnimeSearch />
+				<div className='flex flex-shrink flex-grow-0 basis-[640px] mx-auto gap-3'>
+					<InputSearch />
+					<FilterButton />
 				</div>
 			</div>
 		</header>

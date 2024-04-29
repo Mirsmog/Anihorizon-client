@@ -10,3 +10,8 @@
 		backface-visibility: hidden;
 	}
 }
+
+html {
+	scrollbar-width: thin;
+	color-scheme: dark;
+}

@@ -17,6 +17,7 @@ export interface IMenuLink {
 	name: string
 	path: string
 	Icon: LucideIcon
+	btn?: boolean
 }
 
 export const MENU_NAVIGATION: IMenuLink[] = [
@@ -38,7 +39,8 @@ export const MENU_NAVIGATION: IMenuLink[] = [
 	{
 		name: 'Случайное',
 		path: '/random',
-		Icon: Dices
+		Icon: Dices,
+		btn: true
 	}
 ]
 
