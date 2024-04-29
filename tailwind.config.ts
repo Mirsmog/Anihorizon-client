@@ -26,6 +26,7 @@ const config: Config = {
 				'primary-black': '#1b1919',
 				'primary-blue': '#100e19',
 				'light-salmon': '#fda471',
+				'sidebar-gray': '#460c0c',
 				charm: '#d57880'
 			}
 		}

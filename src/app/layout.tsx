@@ -30,7 +30,7 @@ export default function RootLayout({
 				<body
 					className={clsx(
 						inter.className,
-						'w-full min-h-screen bg-primary-blue text-white'
+						'w-full min-h-screen bg-white text-white'
 					)}
 				>
 					{children}
