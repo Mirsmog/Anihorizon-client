@@ -1,5 +1,6 @@
 'use client'
 
+import { redirect } from 'next/navigation'
 import React from 'react'
 
 import AnimeTitle from '@/components/title'
@@ -12,7 +13,8 @@ const Random: React.FC<Random> = ({}) => {
 	const { data } = useRandomTitle()
 	if (!data) return
 	const title = data.data
-	return <AnimeTitle {...title} />
+
+	return redirect(`/watch?n=${title.code}`)
 }
 
 export default Random

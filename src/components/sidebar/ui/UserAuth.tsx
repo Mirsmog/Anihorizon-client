@@ -7,7 +7,7 @@ interface UserAuth {
 	compact?: boolean
 }
 
-export const UserAuth: React.FC<UserAuth> = ({ compact = false }) => {
+export const UserAuth: React.FC<UserAuth> = ({ compact }) => {
 	return (
 		<Link
 			className={clsx('flex py-4 gap-4 items-center mt-10 mb-4 justify-center')}

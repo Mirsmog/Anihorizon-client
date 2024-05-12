@@ -15,9 +15,9 @@
 }
 
 .titleName {
-	@apply w-full text-center mt-2 line-clamp-2 text-base font-semibold;
+	@apply w-full text-center mt-2 line-clamp-2 sm:text-base font-semibold text-sm;
 }
 
 .titleInfo {
-	@apply absolute bg-cool-black rounded-md z-30 scale-0 duration-75 transition-transform min-w-[330px] p-4 flex flex-col overflow-hidden;
+	@apply absolute bg-cool-black rounded-md z-30 scale-0 duration-75 transition-transform w-[calc(200%+16px)] sm:min-w-[330px] p-4 flex flex-col overflow-hidden;
 }

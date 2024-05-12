@@ -25,7 +25,7 @@ const SignUpPage: React.FC<SignUpPage> = ({}) => {
 	}
 
 	return (
-		<div className='w-2/3'>
+		<div className='w-full max-w-[400px] pt-12 pb-6'>
 			<form onSubmit={handleSubmit(onSubmit)}>
 				<div className='flex flex-col gap-6'>
 					<h2 className='text-center text-2xl mb-2 select-none'>Регистрация</h2>
@@ -83,8 +83,8 @@ const SignUpPage: React.FC<SignUpPage> = ({}) => {
 						Создать аккаунт
 					</button>
 					<div>
-						<div className='text-center select-none relative before:absolute before:w-full before:h-[1px] before:bg-slate-800 before:left-0 before:top-[calc(50%-0.5px)] before:z-10 opacity-100'>
-							<span className='bg-primary-blue px-4 relative z-10 uppercase text-slate-600'>
+						<div className='text-center select-none relative before:absolute before:w-full before:h-[1px] before:bg-slate-600 before:left-0 before:top-[calc(50%-0.5px)] before:z-10 opacity-100'>
+							<span className='bg-cool-black px-4 relative z-10 uppercase text-slate-600'>
 								Другое
 							</span>
 						</div>
@@ -92,7 +92,7 @@ const SignUpPage: React.FC<SignUpPage> = ({}) => {
 							<button
 								type='button'
 								title='Продолжить через Google аккаунт'
-								className='flex justify-center items-center gap-2 text-center w-full py-2 px-4 bg-cool-black rounded-[4px] border border-solid border-opacity-20 border-accent-blue group'
+								className='flex justify-center items-center gap-2 text-center w-full py-2 px-4 bg-primary-black rounded-[4px] border border-solid border-opacity-20 border-accent-blue group'
 							>
 								<GoogleIcon
 									width={20}
@@ -102,7 +102,7 @@ const SignUpPage: React.FC<SignUpPage> = ({}) => {
 							<button
 								type='button'
 								title='Продолжить через Github аккаунт'
-								className='flex justify-center items-center gap-2 text-center w-full py-2 px-4 bg-cool-black rounded-[4px] border border-solid border-opacity-20 border-accent-blue group'
+								className='flex justify-center items-center gap-2 text-center w-full py-2 px-4 bg-primary-black rounded-[4px] border border-solid border-opacity-20 border-accent-blue group'
 							>
 								<GithubIcon
 									width={22}

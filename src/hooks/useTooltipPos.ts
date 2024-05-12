@@ -16,10 +16,10 @@ export const useTooltipPosition = (
 		const tooltipPos = tooltipRef.current.getBoundingClientRect()
 		const parentPos = parentRef.current.getBoundingClientRect()
 		if (!tooltipPos || !parentPos) return
-		const isRightEnd = tooltipPos.right > parentPos.width - 100
-		const isLeftEnd = tooltipPos.left < parentPos.left
-		const isTopEnd = tooltipPos.top < parentPos.top + 56
-		const isBottomEnd = tooltipPos.bottom > parentPos.bottom - 100
+		let isRightEnd = tooltipPos.right > parentPos.width - 100
+		let isLeftEnd = tooltipPos.left < parentPos.left
+		let isTopEnd = tooltipPos.top < parentPos.top + 56
+		let isBottomEnd = tooltipPos.bottom > parentPos.bottom - 100
 
 		setPosition(prevPosition => {
 			let newPosition = { ...prevPosition }
@@ -38,6 +38,36 @@ export const useTooltipPosition = (
 			if ((isBottomEnd && isTopEnd) || (isRightEnd && isLeftEnd)) return null
 			return newPosition
 		})
+
+		if (parentRef.current.clientWidth < 500) {
+			isRightEnd = tooltipPos.right > parentPos.width
+			isLeftEnd = tooltipPos.left < parentPos.left
+			isTopEnd = tooltipPos.top < parentPos.top + 56
+			isBottomEnd = tooltipPos.bottom > parentPos.bottom - 100
+
+			setPosition(prevPosition => {
+				let newPosition = {
+					top: '60%',
+					left: '0%',
+					right: 'auto',
+					bottom: 'auto'
+				}
+
+				if (isRightEnd) {
+					newPosition = { ...newPosition, left: 'auto', right: '0%' }
+				} else if (isLeftEnd) {
+					newPosition = { ...newPosition, left: '0%', right: 'auto' }
+				}
+
+				if (isBottomEnd) {
+					newPosition = { ...newPosition, top: 'auto', bottom: '60%' }
+				} else if (isTopEnd) {
+					newPosition = { ...newPosition, top: '60%', bottom: 'auto' }
+				}
+				if ((isBottomEnd && isTopEnd) || (isRightEnd && isLeftEnd)) return null
+				return newPosition
+			})
+		}
 	}
 
 	React.useEffect(() => {
