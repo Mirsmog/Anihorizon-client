@@ -1,8 +1,6 @@
 'use client'
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { getCookie, setCookie } from 'cookies-next'
-import { cookies } from 'next/headers'
 import React from 'react'
 
 interface Providers extends React.PropsWithChildren {}

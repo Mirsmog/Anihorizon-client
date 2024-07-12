@@ -20,7 +20,6 @@ const config: Config = {
 				'secondary-gray': '#656463',
 				'secondary-dark-gray': '#383737',
 				'primary-gray': '#342e2e',
-				'spanish-blue': '#1e1d2b',
 				'cool-black': '#1e1d2b',
 				'accent-blue': '#758afd',
 				'soft-blue': '#91a1d6',
