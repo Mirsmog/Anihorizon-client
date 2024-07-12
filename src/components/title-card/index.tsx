@@ -32,9 +32,6 @@ export const TitleCard: React.FC<TitleCardProps> = ({
 			<div className='relative group'>
 				<Link
 					href={`/watch?n=${code}`}
-					onClick={e => {
-						e.preventDefault()
-					}}
 				>
 					<div className='relative group'>
 						<div className='absolute w-full h-full top-0 left-0 z-10 pointer-events-none'>
