@@ -11,10 +11,7 @@ const nextConfig = {
 		]
 	},
 	images: {
-		remotePatterns: [
-			{ protocol: 'https', hostname: 'anilibria.tv' },
-			{ protocol: 'https', hostname: 'via.placeholder.com' }
-		]
+		remotePatterns: [{ protocol: 'https', hostname: 'anilibria.tv' }]
 	}
 }
 

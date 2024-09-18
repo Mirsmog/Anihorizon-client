@@ -30,9 +30,7 @@ export const TitleCard: React.FC<TitleCardProps> = ({
 	return (
 		<div>
 			<div className='relative group'>
-				<Link
-					href={`/watch?n=${code}`}
-				>
+				<Link href={`/watch?n=${code}`}>
 					<div className='relative group'>
 						<div className='absolute w-full h-full top-0 left-0 z-10 pointer-events-none'>
 							<span className={styles.titleQuality}>{titleQuality}</span>
@@ -40,7 +38,7 @@ export const TitleCard: React.FC<TitleCardProps> = ({
 								Ep {player.episodes.last || 1}
 							</span>
 						</div>
-						<Image
+						<img
 							width={350}
 							height={500}
 							className='w-full max-h-[324px] rounded-lg rounded-bl-2xl rounded-tl-2xl'
