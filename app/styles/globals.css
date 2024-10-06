@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/*
+ ==== UNUSED COLORS ====
+ --color-accent-pink: 255 0 93;
+ --color-accent-dark-pink: 207 0 75;
+ --color-secondary-white: 247 247 246;
+ --color-secondary-gray: 101 100 99;
+ --color-secondary-dark-gray: 56 55 55;
+ --color-primary-gray: 52 46 46;
+ --color-charm: 213 120 128;
+ --color-primary-black: 27 25 25;
+ ==== UNUSED COLORS ====
+*/
+
+:root {
+	--color-accent-blue: 132, 134, 240;
+	/*TODO: Find better second blue coolor*/
+	--color-light-blue: 145, 161, 214;
+
+	--color-light-salmon: 253, 164, 113;
+
+	--color-cool-black: 35, 34, 58;
+
+	--color-background: 16, 14, 25;
+	--color-foreground: 250, 248, 255;
+}
+
+@layer base {
+	body {
+		@apply bg-background text-foreground;
+	}
+}

@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './styles/globals.css'
 import Providers from './providers'
 import { SITE_META_INFO } from '@/consts'
+import Header from '@/components/Header'
 
 export const metadata: Metadata = {
 	title: SITE_META_INFO.name,
@@ -19,7 +20,10 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<Providers>
-				<body className={inter.className}>{children}</body>
+				<body className={inter.className}>
+					<Header />
+					{children}
+				</body>
 			</Providers>
 		</html>
 	)
