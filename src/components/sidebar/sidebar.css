@@ -1,9 +1,0 @@
-.sidebar {
-	@apply w-full max-w-[var(--sidebar-size)] bg-cool-black fixed top-[var(--header-size)] max-h-[calc(100dvh-var(--header-size))] h-full flex-col overflow-y-auto hidden lg:flex;
-	scrollbar-color: transparent transparent;
-	scrollbar-width: thin;
-}
-
-.sidebar:hover {
-	scrollbar-color: #707ca2 transparent;
-}
