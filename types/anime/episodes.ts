@@ -1,24 +1,24 @@
-export interface IAnimeEpisodes {
+export interface IEpisodesAnimeData {
 	success: boolean
-	data: AnimeEpisodesData
+	data: IEpisodesData
 }
 
-export interface IAnimeEpisodeServers {
+export interface IEpisodeAnimeServersData {
 	success: boolean
-	data: AnimeEpisodeServersData
+	data: IEpisodeServersData
 }
 
-export interface IAnimeEpisodeStreamingLinks {
+export interface IEpisodeAnimeStreamingLinksData {
 	success: boolean
-	data: AnimeEpisodeStreamingLinksData
+	data: IEpisodeStreamingLinksData
 }
 
-interface AnimeEpisodesData {
+interface IEpisodesData {
 	totalEpisodes: number
 	episodes: IEpisode[]
 }
 
-interface AnimeEpisodeServersData {
+interface IEpisodeServersData {
 	sub: IEpisodeServer[]
 	dub: IEpisodeServer[]
 	raw: IEpisodeServer[]
@@ -26,16 +26,16 @@ interface AnimeEpisodeServersData {
 	episodeNo: number
 }
 
-interface AnimeEpisodeStreamingLinksData {
+interface IEpisodeStreamingLinksData {
 	tracks: IEpisodeTrack[]
-	intro: EpisodeTimeRange
-	outro: EpisodeTimeRange
+	intro: IEpisodeTimeRange
+	outro: IEpisodeTimeRange
 	sources: IEpisodeSource[]
 	anilistID: number
 	malID: number
 }
 
-interface EpisodeTimeRange {
+interface IEpisodeTimeRange {
 	start: number
 	end: number
 }
