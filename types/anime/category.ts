@@ -8,14 +8,14 @@ export interface ICategoryAnimeData {
 interface AnimeCategoryData {
 	animes: IAnime[]
 	genres: string[]
-	top10Animes: Top10Animes
+	top10Animes: ITop10Animes
 	category: string
 	totalPages: number
 	hasNextPage: boolean
 	currentPage: number
 }
 
-interface Top10Animes {
+interface ITop10Animes {
 	today: ITop10Anime[]
 	week: ITop10Anime[]
 	month: ITop10Anime[]

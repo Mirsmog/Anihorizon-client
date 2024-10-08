@@ -46,7 +46,7 @@ export interface ITrendingAnime extends IBaseAnime {
 
 export interface IRelatedAnime extends IBaseAnime {}
 export interface ITopAiringAnime extends IBaseAnime {}
-export interface ITop10Anime extends ITrendingAnime {}
+export interface ITop10Anime extends Omit<ITrendingAnime, 'type'> {}
 export interface IAnime extends ILatestEpisodeAnime {}
 export interface IMostFavoriteAnime extends IBaseAnime {}
 export interface IMostPopularAnime extends IBaseAnime {}

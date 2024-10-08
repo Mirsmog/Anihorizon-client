@@ -16,7 +16,7 @@ export interface IHomeAnimeData {
 }
 
 interface IHomeData {
-	top10Animes: ITop10Anime[]
+	top10Animes: ITop10Animes
 	trendingAnimes: ITrendingAnime[]
 	topAiringAnimes: ITopAiringAnime[]
 	spotlightAnimes: ISpotlightAnime[]
@@ -26,4 +26,10 @@ interface IHomeData {
 	latestEpisodeAnimes: ILatestEpisodeAnime[]
 	latestCompletedAnimes: ILatestCompletedAnime[]
 	genres: string[]
+}
+
+interface ITop10Animes {
+	today: ITop10Anime[]
+	week: ITop10Anime[]
+	month: ITop10Anime[]
 }
