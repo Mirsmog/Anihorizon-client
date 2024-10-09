@@ -1,0 +1,7 @@
+.header {
+	@apply fixed top-0 left-0 w-full bg-black-cool z-50 h-[var(--header-height)] flex items-center justify-center;
+}
+
+.container {
+	@apply w-full px-4 flex max-w-[1952px];
+}

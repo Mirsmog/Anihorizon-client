@@ -2,8 +2,10 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Providers from './providers'
 import { SITE_META_INFO } from '@/consts'
-import Header from '@/components/Header'
 import Meta from './meta'
+import Header from '@/components/Header'
+import Sidebar from '@/components/Sidebar'
+import Content from '@/components/Content'
 import './styles/globals.css'
 
 const inter = Inter({ subsets: ['cyrillic', 'latin'], variable: '--font-inter' })
@@ -24,7 +26,8 @@ export default function RootLayout({
 			<Providers>
 				<body className={inter.className}>
 					<Header />
-					{children}
+					<Sidebar />
+					<Content>{children}</Content>
 				</body>
 			</Providers>
 		</html>
