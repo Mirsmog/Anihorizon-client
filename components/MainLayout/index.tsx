@@ -10,7 +10,7 @@ interface IMainLayout {
 const MainLayout: React.FC<IMainLayout> = ({ children }) => {
 	const { isCompact } = useSidebar()
 
-	const [headerHeight] = React.useState(60)
+	const [headerHeight] = React.useState(56)
 	const [sidebarWidth, setSidebarWidth] = React.useState(isCompact ? 60 : 240)
 
 	React.useEffect(() => {

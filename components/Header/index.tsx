@@ -9,17 +9,17 @@ interface IHeader {}
 const Header: React.FC<IHeader> = ({}) => {
 	const { toggleSidebar } = useSidebar()
 	return (
-		<div className={styles.header}>
+		<header className={styles.header}>
 			<div className={styles.container}>
-				<Logo />
 				<button
-					className='ml-auto'
+					className='mr-1 text-accent uppercase'
 					onClick={toggleSidebar}
 				>
-					toggle
+					bar
 				</button>
+				<Logo />
 			</div>
-		</div>
+		</header>
 	)
 }
 

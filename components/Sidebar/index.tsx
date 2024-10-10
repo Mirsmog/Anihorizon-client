@@ -4,7 +4,7 @@ import styles from './style.module.css'
 interface ISidebar {}
 
 const Sidebar: React.FC<ISidebar> = ({}) => {
-	return <div className={styles.sidebar}></div>
+	return <aside className={styles.sidebar}></aside>
 }
 
 export default Sidebar

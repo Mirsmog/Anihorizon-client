@@ -9,15 +9,13 @@ const config: Config = {
 	theme: {
 		extend: {
 			colors: {
-				primary: {
+				secondary: 'rgba(var(--color-cool-black),1)',
+				accent: {
 					DEFAULT: 'rgba(var(--color-accent-blue),1)',
+					salmon: 'rgba(var(--color-light-salmon),1)',
 					light: 'rgba(var(--color-accent-blue),0.5)'
 				},
-				black: {
-					DEFAULT: 'rgba(0,0,0,1)',
-					cool: 'rgba(var(--color-cool-black),1)'
-				},
-				secondary: 'rgba(var(--color-light-salmon),1)',
+
 				background: 'rgba(var(--color-background),1)',
 				foreground: 'rgba(var(--color-foreground),1)'
 			}
