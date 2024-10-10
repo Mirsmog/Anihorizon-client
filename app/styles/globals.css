@@ -27,10 +27,6 @@
 
 	--color-background: 16, 14, 25;
 	--color-foreground: 250, 248, 255;
-	/* LAYOUT */
-
-	--header-height: 56px;
-	--sidebar-width: 60px;
 }
 
 @layer base {

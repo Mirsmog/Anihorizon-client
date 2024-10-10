@@ -1,0 +1,3 @@
+.layout {
+	@apply ml-[var(--sidebar-width)] mt-[var(--header-height)];
+}
