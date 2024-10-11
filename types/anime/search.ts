@@ -1,11 +1,31 @@
-import { IAnime, IMostPopularAnime } from './share'
+import { IAnime, IMostPopularAnime, ISuggestionAnime } from './share'
 
-export interface ISearchAnimeData {
+export interface ISearchFilterAnimeData {
 	success: boolean
-	data: ISearchData
+	data: ISearchFilterData
 }
 
-interface ISearchData {
+export interface ISearchSuggestionAnimeData {
+	success: boolean
+	data: ISearchSuggestionData
+}
+
+export interface ISearchFilterAnimeParams {
+	q: string
+	page?: number
+	type?: string
+	status?: string
+	rated?: string
+	score?: string
+	season?: string
+	language?: string
+	start_date?: string
+	end_date?: string
+	sort?: string
+	genres?: string
+}
+
+interface ISearchFilterData {
 	animes: IAnime[]
 	mostPopularAnimes: IMostPopularAnime[]
 	searchQuery: string
@@ -15,4 +35,8 @@ interface ISearchData {
 	totalPages: number
 	hasNextPage: boolean
 	currentPage: number
+}
+
+interface ISearchSuggestionData {
+	suggestions: ISuggestionAnime[]
 }

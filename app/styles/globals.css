@@ -17,7 +17,7 @@
 
 :root {
 	/* COLORS */
-	--color-accent-blue: 132, 134, 240;
+	--color-accent-blue: 117, 138, 253;
 	/*TODO: Find better second blue coolor*/
 	--color-light-blue: 145, 161, 214;
 
@@ -32,5 +32,11 @@
 @layer base {
 	body {
 		@apply bg-background text-foreground;
+	}
+}
+
+@layer components {
+	.button-animated {
+		@apply border border-transparent hover:bg-white/10 active:bg-accent/20 active:border-accent/30 transition-all duration-100;
 	}
 }

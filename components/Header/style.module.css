@@ -3,5 +3,5 @@
 }
 
 .container {
-	@apply w-full px-4 flex max-w-[1952px];
+	@apply w-full px-4 flex max-w-[1952px] items-center;
 }

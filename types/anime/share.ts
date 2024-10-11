@@ -29,6 +29,10 @@ export interface IBaseAnime {
 	type: AnimeTypes
 }
 
+export interface ISuggestionAnime extends Omit<IBaseAnime, 'episodes' | 'type'> {
+	moreInfo: string[]
+}
+
 export interface ILatestEpisodeAnime extends IBaseAnime {
 	duration: string
 	rating: string | null

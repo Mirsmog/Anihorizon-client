@@ -1,3 +1,10 @@
 .layout {
+	--header-height: 56px;
+	--sidebar-width: 240px;
+
+	&.compact {
+		--sidebar-width: 60px;
+	}
+
 	@apply ml-[var(--sidebar-width)] mt-[var(--header-height)];
 }
