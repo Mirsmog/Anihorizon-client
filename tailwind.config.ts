@@ -18,6 +18,9 @@ const config: Config = {
 
 				background: 'rgba(var(--color-background),1)',
 				foreground: 'rgba(var(--color-foreground),1)'
+			},
+			animation: {
+				'spin-fast': 'spin 0.5s linear infinite'
 			}
 		}
 	},
