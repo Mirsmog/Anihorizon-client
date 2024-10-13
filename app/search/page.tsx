@@ -1,3 +1,14 @@
+import Dropdown from '@/components/ui/Dropdown'
+
 export default function Search() {
-	return <div>search</div>
+	return (
+		<div>
+			<Dropdown
+				type='checkbox'
+				data={['romance', 'harem', 'isekai', 'horor', 'vampire']}
+			>
+				Select genre
+			</Dropdown>
+		</div>
+	)
 }

@@ -76,12 +76,14 @@ const SearchBox: React.FC<ISearchBox> = () => {
 			</form>
 
 			<div className={clsx(styles.popup, { [styles.show]: isPopupOpen })}>
-				<ul>
+				<ul className=''>
 					{animes.map(anime => (
-						<AnimeSuggestionCard
+						<li
 							key={anime.id}
-							{...anime}
-						/>
+							className='group bg-background hover:bg-secondary first:border-t first:border-gray-600/60'
+						>
+							<AnimeSuggestionCard {...anime} />
+						</li>
 					))}
 				</ul>
 				{animes.length > 4 && (
