@@ -1,3 +1,0 @@
-.menu {
-	@apply transition-transform origin-top duration-100 overflow-hidden absolute top-[calc(100%+0.5rem)];
-}

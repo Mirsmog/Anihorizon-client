@@ -3,6 +3,7 @@ import React from 'react'
 import { clsx } from 'clsx'
 import { ChevronDown } from 'lucide-react'
 import styles from './style.module.css'
+import Checkbox from '../ui/Checkbox'
 
 interface IDropdown {
 	data: string[]
@@ -18,23 +19,21 @@ const Dropdown: React.FC<IDropdown> = ({ data, type, children }) => {
 	return (
 		<div className='relative'>
 			<button
-				className='bg-secondary py-2 pr-10 px-4 w-full text-left rounded-md relative'
+				className={styles.button}
 				onClick={handleClick}
 			>
 				{children}
 				<ChevronDown
-					className={clsx('absolute right-2  top-1/2 -translate-y-1/2 transition-transform duration-300', {
-						'rotate-180': isOpen
-					})}
+					className={clsx(styles.chevron, { 'rotate-180': isOpen })}
 					size={24}
 				/>
 			</button>
 			<div className={clsx(styles.menu, isOpen ? 'scale-y-100' : 'scale-y-0')}>
-				<ul className={clsx('p-2 bg-secondary rounded-md flex h-56')}>
+				<ul className={clsx('p-4 bg-secondary rounded-md grid gap-x-10 gap-y-2 grid-cols-4')}>
 					{data.map(item => (
 						<li key={item}>
-							<label className='cursor-pointer select-none'>
-								<input type='checkbox' />
+							<label className='flex cursor-pointer select-none items-center gap-1 text-foreground/90 text-sm'>
+								<Checkbox />
 								<span>{item}</span>
 							</label>
 						</li>

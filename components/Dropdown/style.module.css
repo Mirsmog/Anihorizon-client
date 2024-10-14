@@ -1,0 +1,11 @@
+.menu {
+	@apply transition-transform origin-top duration-100 overflow-hidden absolute top-[calc(100%+0.5rem)];
+}
+
+.button {
+	@apply bg-secondary py-2 pr-10 px-4 w-full text-left rounded-md relative;
+}
+
+.chevron {
+	@apply absolute right-2  top-1/2 -translate-y-1/2 transition-transform duration-300;
+}
