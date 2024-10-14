@@ -24,7 +24,7 @@ const Checkbox: React.FC<ICheckbox> = ({}) => {
 				)}
 			>
 				<Check
-					className={clsx(checked ? 'block' : 'hidden')}
+					className={clsx('transition-transform duration-300 text-foreground', checked ? 'scale-100' : 'scale-0')}
 					size={12}
 					strokeWidth={4}
 				/>

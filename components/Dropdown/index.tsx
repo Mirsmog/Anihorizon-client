@@ -9,13 +9,29 @@ interface IDropdown {
 	data: string[]
 	type: 'checkbox' | 'radio'
 	children: React.ReactNode
+	selectedItems: string[]
+	setSelectedItems: React.Dispatch<React.SetStateAction<string[]>>
 }
 
-const Dropdown: React.FC<IDropdown> = ({ data, type, children }) => {
+const Dropdown: React.FC<IDropdown> = ({ data, type, children, setSelectedItems, selectedItems }) => {
 	const [isOpen, setIsOpen] = React.useState(false)
-	const handleClick = (e: any) => {
+
+	const handleAddItem = (newItem: string) => {
+		if (selectedItems.includes(newItem)) {
+			setSelectedItems(prev => prev.filter(prevItem => prevItem !== newItem))
+		} else {
+			setSelectedItems(prev => [...prev, newItem])
+		}
+	}
+
+	React.useEffect(() => {
+		console.log(selectedItems)
+	}, [selectedItems])
+
+	const handleClick = () => {
 		setIsOpen(prev => !prev)
 	}
+
 	return (
 		<div className='relative'>
 			<button
@@ -29,10 +45,16 @@ const Dropdown: React.FC<IDropdown> = ({ data, type, children }) => {
 				/>
 			</button>
 			<div className={clsx(styles.menu, isOpen ? 'scale-y-100' : 'scale-y-0')}>
-				<ul className={clsx('p-4 bg-secondary rounded-md grid gap-x-10 gap-y-2 grid-cols-4')}>
+				<ul className={clsx('p-4 bg-secondary rounded-md grid gap-x-9 gap-y-1 grid-cols-4')}>
 					{data.map(item => (
 						<li key={item}>
-							<label className='flex cursor-pointer select-none items-center gap-1 text-foreground/90 text-sm'>
+							<label
+								className={clsx(
+									'flex cursor-pointer select-none items-center gap-1  text-sm p-1',
+									selectedItems.includes(item) ? 'text-accent' : 'text-foreground/90'
+								)}
+								onChange={() => handleAddItem(item)}
+							>
 								<Checkbox />
 								<span>{item}</span>
 							</label>
