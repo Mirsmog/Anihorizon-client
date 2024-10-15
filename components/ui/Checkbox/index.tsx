@@ -3,19 +3,19 @@ import styles from './style.module.css'
 import { Check } from 'lucide-react'
 import clsx from 'clsx'
 
-interface ICheckbox {}
+interface ICheckbox {
+	checked: boolean
+	onChange: () => void
+}
 
-const Checkbox: React.FC<ICheckbox> = ({}) => {
-	const [checked, setChecked] = React.useState(false)
-	const handleChecked = () => {
-		setChecked(prev => !prev)
-	}
+const Checkbox: React.FC<ICheckbox> = ({ checked, onChange }) => {
 	return (
 		<div className='relative pl-4'>
 			<input
 				className='sr-only'
-				onChange={handleChecked}
 				type='checkbox'
+				checked={checked}
+				onChange={onChange}
 			/>
 			<span
 				className={clsx(

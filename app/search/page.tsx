@@ -51,13 +51,12 @@ export default function Search() {
 	return (
 		<div>
 			<Dropdown
-				type='checkbox'
-				data={animeGenres}
+				type='radio'
+				items={animeGenres}
 				selectedItems={selectedGenres}
 				setSelectedItems={setSelectedGenres}
-			>
-				Select genre
-			</Dropdown>
+				name='Select genre'
+			/>
 		</div>
 	)
 }
