@@ -14,9 +14,9 @@ const Header: React.FC<IHeader> = ({}) => {
 	return (
 		<header className={styles.header}>
 			<div className={styles.container}>
-				<div className='flex gap-3 items-center -ml-1'>
+				<div className='-ml-1 flex items-center gap-3'>
 					<button
-						className='p-2 rounded-full button-animated'
+						className='button-animated rounded-full p-2'
 						onClick={toggleSidebar}
 					>
 						<AlignJustify size={24} />

@@ -55,7 +55,7 @@ const SearchBox: React.FC<ISearchBox> = () => {
 				onSubmit={handleSubmit}
 			>
 				{isLoading ? (
-					<div className='z-20 h-full flex items-center px-2 opacity-80'>
+					<div className='z-20 flex h-full items-center px-2 opacity-80'>
 						<LoaderCircle
 							className='animate-spin-fast'
 							size={20}
@@ -80,7 +80,7 @@ const SearchBox: React.FC<ISearchBox> = () => {
 					{animes.map(anime => (
 						<li
 							key={anime.id}
-							className='group bg-background hover:bg-secondary first:border-t first:border-gray-600/60'
+							className='group bg-background first:border-t first:border-gray-600/60 hover:bg-secondary'
 						>
 							<AnimeSuggestionCard {...anime} />
 						</li>
