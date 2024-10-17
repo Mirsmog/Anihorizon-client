@@ -6,9 +6,7 @@ import Logo from '../ui/Logo'
 import { useSidebar } from '@/app/providers/sidebar'
 import SearchBox from '../SearchBox'
 
-interface IHeader {}
-
-const Header: React.FC<IHeader> = ({}) => {
+const Header: React.FC = ({}) => {
 	const { toggleSidebar } = useSidebar()
 
 	return (

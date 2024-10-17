@@ -9,9 +9,7 @@ import { useAnimeSearchSuggestion } from '@/features/anime/queries'
 import AnimeSuggestionCard from '../AnimeSuggestionCard'
 import styles from './style.module.css'
 
-interface ISearchBox {}
-
-const SearchBox: React.FC<ISearchBox> = () => {
+const SearchBox: React.FC = () => {
 	const router = useRouter()
 	const searchParams = useSearchParams()
 	const initialQueryValue = searchParams.get('q') || ''

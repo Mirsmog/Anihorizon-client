@@ -1,8 +1,6 @@
 import React from 'react'
 
-interface ISidebarCompact {}
-
-const SidebarCompact: React.FC<ISidebarCompact> = ({}) => {
+const SidebarCompact: React.FC = ({}) => {
 	return <div>ct</div>
 }
 

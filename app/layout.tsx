@@ -5,10 +5,6 @@ import { Inter } from 'next/font/google'
 import { SITE_META_INFO } from '@/consts'
 import Meta from './meta'
 import Providers from './providers'
-import Header from '@/components/Header'
-import Sidebar from '@/components/Sidebar'
-import Content from '@/components/Content'
-import MainLayout from '@/components/MainLayout'
 import './styles/globals.css'
 
 const inter = Inter({ subsets: ['cyrillic', 'latin'], variable: '--font-inter' })
@@ -29,13 +25,7 @@ export default function RootLayout({
 		<html lang='en'>
 			<Meta />
 			<Providers isSidebarCompact={isSidebarCompact}>
-				<body className={inter.className}>
-					<MainLayout>
-						<Header />
-						<Sidebar />
-						<Content>{children}</Content>
-					</MainLayout>
-				</body>
+				<body className={inter.className}>{children}</body>
 			</Providers>
 		</html>
 	)

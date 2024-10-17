@@ -1,8 +1,6 @@
 import React from 'react'
 
-interface ISidebarDefault {}
-
-const SidebarDefault: React.FC<ISidebarDefault> = ({}) => {
+const SidebarDefault: React.FC = ({}) => {
 	return <div>df</div>
 }
 
